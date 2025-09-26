@@ -1,24 +1,25 @@
 import { Container, Row } from "react-bootstrap";
 import CardProducto from "./producto/CardProducto";
 import Tendencias from "./producto/Tendencias";
+
+// Importar imágenes
 import alfajores from "../../assets/alfajorchocolate.jpg";
 import galleta from "../../assets/galleta.jpg";
 import capuchino from "../../assets/capuchino.jpg";
-// import medialuna from "../assets/medialuna.jpg";
-// import budin from "../assets/budin.jpg";
-
 const Inicio = () => {
-  const productos = [
+  const productosInicio = [
     {
       imagen: alfajores,
       titulo: "Alfajor de chocolate",
-      descripcion: "Delicioso alfajor relleno de dulce de leche y bañado en chocolate.",
+      descripcion:
+        "Delicioso alfajor relleno de dulce de leche y bañado en chocolate.",
       precio: 1200,
     },
     {
       imagen: galleta,
       titulo: "Galleta rellena",
-      descripcion: "Crujiente por fuera y suave por dentro, con relleno artesanal.",
+      descripcion:
+        "Crujiente por fuera y suave por dentro, con relleno artesanal.",
       precio: 1000,
     },
     {
@@ -27,18 +28,6 @@ const Inicio = () => {
       descripcion: "Espuma de leche cremosa sobre un espresso fuerte.",
       precio: 350,
     },
-    // {
-    //   imagen: medialuna,
-    //   titulo: "Medialuna",
-    //   descripcion: "Suave y hojaldrada, ideal para el desayuno.",
-    //   precio: 500,
-    // },
-    // {
-    //   imagen: budin,
-    //   titulo: "Budín casero",
-    //   descripcion: "Dulce y esponjoso, perfecto para acompañar un café.",
-    //   precio: 700,
-    // },
   ];
 
   return (
@@ -48,11 +37,12 @@ const Inicio = () => {
         src="https://images.pexels.com/photos/25391920/pexels-photo-25391920.jpeg"
         alt="fondo alfajores"
       />
+
       <Container className="mt-5">
         <h1 className="display-4 text-underline-warning text-center">Nuestros Productos</h1>
         <hr />
         <Row>
-          {productos.map((producto, index) => (
+          {productosInicio.map((producto, index) => (
             <CardProducto
               key={index}
               imagen={producto.imagen}

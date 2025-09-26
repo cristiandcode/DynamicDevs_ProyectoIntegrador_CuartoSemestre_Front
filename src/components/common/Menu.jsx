@@ -4,15 +4,14 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const navegacion = useNavigate();
-  const logout = () =>{
-    //1 Resetear el state
-    sessionStorage.removeItem('usuarioChocodevs');
-    //Actualizamos el estado
-    setUsuarioLogueado('');
-    //Redireccionamos al inicio
-    navegacion('/');
-  }
 
+  const logout = () => {
+    // 1. Resetear el state y eliminar del localStorage
+    localStorage.removeItem("usuarioChocodevs");
+    setUsuarioLogueado("");
+    // 2. Redireccionamos al inicio
+    navegacion("/");
+  };
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -31,14 +30,20 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
             <NavLink end className="nav-link" to="/">
               Inicio
             </NavLink>
-             {
-              //hay alguien logueado
-              usuarioLogueado.length > 0 ? (
+            {
+              // Comprobamos si hay usuario logueado
+              usuarioLogueado && usuarioLogueado.length > 0 ? (
                 <>
                   <NavLink end className="nav-link" to="/administrador">
                     Administrador
                   </NavLink>
-                  <Button variant="link" className="nav-link" onClick={logout}>Cerrar Sesión</Button>
+                  <Button
+                    variant="link"
+                    className="nav-link"
+                    onClick={logout}
+                  >
+                    Cerrar Sesión
+                  </Button>
                 </>
               ) : (
                 <>

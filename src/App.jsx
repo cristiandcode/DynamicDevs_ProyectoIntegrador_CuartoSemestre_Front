@@ -11,10 +11,14 @@ import Login from "./components/pages/Login";
 import FormularioProducto from "./components/pages/producto/FormularioProducto";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import ListaRutasAdmin from "./components/routes/ListaRutasAdmin";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 function App() {
-  const usuario = JSON.parse(sessionStorage.getItem("usuarioCroissant")) || "";
-  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+  const [usuarioLogueado, setUsuarioLogueado] = useState("");
+
+useEffect(() => {
+  const usuario = JSON.parse(localStorage.getItem("usuarioChocodevs")) || "";
+  setUsuarioLogueado(usuario);
+}, []);
   return (
     <>
       <BrowserRouter>

@@ -5,7 +5,7 @@ const userAdmin = {
 
 export const  login = (usuario) =>{
     if(usuario.email === userAdmin.email && usuario.password === userAdmin.password){
-        sessionStorage.setItem('usuarioChocodevs', JSON.stringify(userAdmin.email))
+       localStorage.setItem('usuarioChocodevs', JSON.stringify(userAdmin.email));
         return true
     } else{
         return false
