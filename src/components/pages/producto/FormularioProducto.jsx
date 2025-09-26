@@ -86,8 +86,8 @@ const FormularioProducto = () => {
               required: "La categoria es obligatoria",
             })}>
             <option value="">Seleccione una opcion</option>
+            <option value="Alfajores">Alfajores</option>
             <option value="Infusiones">Infusiones</option>
-            <option value="Batidos">Batidos</option>
             <option value="Dulce">Dulce</option>
             <option value="Salado">Salado</option>
             <option value="Sandwich">Sandwich</option>
@@ -100,7 +100,7 @@ const FormularioProducto = () => {
           <Form.Label>Descripción breve*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: Una taza de café suave y aromático."
+            placeholder="Ej: Un alfajor de dulce de leche"
             as="textarea"
             {...register("descripcion_breve", {
               required: "La descripcion breve del producto es obligatorio",
@@ -124,7 +124,7 @@ const FormularioProducto = () => {
           <Form.Label>Descripción Amplia*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: El café americano es una bebida caliente que consiste en un espresso diluido con agua caliente, lo que resulta en una taza de café suave y aromático. Es una opción popular para aquellos que prefieren un café menos intenso que el espresso tradicional. Perfecto para disfrutar en cualquier momento del día."
+            placeholder="El alfajor de dulce de leche combina dos suaves tapas con un generoso relleno de dulce de leche, ideal para acompañar el café o disfrutar como un dulce en cualquier momento."
             as="textarea"
             {...register("descripcion_amplia", {
               required: "La descripcion amplia es obligatoria",
