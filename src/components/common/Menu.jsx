@@ -6,7 +6,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const navegacion = useNavigate();
   const logout = () =>{
     //1 Resetear el state
-    sessionStorage.removeItem('usuarioCroissant');
+    sessionStorage.removeItem('usuarioChocodevs');
     //Actualizamos el estado
     setUsuarioLogueado('');
     //Redireccionamos al inicio
