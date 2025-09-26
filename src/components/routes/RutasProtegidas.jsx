@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom";
 
 const RutasProtegidas = ({children}) => {
     //agregar la logica para definir si mostramos o ocultamos las rutas hijas
-    const userAdmin = JSON.parse(sessionStorage.getItem('usuarioCroissant')) || null;
+    const userAdmin = JSON.parse(sessionStorage.getItem('usuarioChocodevs')) || null;
     //preguntar si no hay nadie como admin
     if(!userAdmin){
         //Redireccionar al admin
