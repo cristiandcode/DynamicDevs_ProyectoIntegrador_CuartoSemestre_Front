@@ -49,7 +49,7 @@ const Inicio = () => {
         alt="fondo alfajores"
       />
       <Container className="mt-5">
-        <h1 className="display-4 text-underline-warning">Nuestros Productos</h1>
+        <h1 className="display-4 text-underline-warning text-center">Nuestros Productos</h1>
         <hr />
         <Row>
           {productos.map((producto, index) => (

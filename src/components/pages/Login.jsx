@@ -24,7 +24,7 @@ const Login = ({ setUsuarioLogueado }) => {
       });
 
       // Guardar usuario en state y en sessionStorage (opcional)
-      sessionStorage.setItem("usuarioCroissant", JSON.stringify(usuario));
+      sessionStorage.setItem("usuarioChocodevs", JSON.stringify(usuario));
       setUsuarioLogueado(usuario.email);
 
       // ✅ REDIRECCIONAR AUTOMATICAMENTE
