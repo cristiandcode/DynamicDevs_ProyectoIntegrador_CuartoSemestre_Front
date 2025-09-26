@@ -17,7 +17,7 @@ const Administrador = () => {
         >
           <Link
             variant="primary"
-            to={"/administrar/crear"}
+            to={"/administrador/crear"}
             className="btn btn-success"
           >
             <i className="bi bi-file-earmark-plus"></i>
