@@ -47,7 +47,7 @@ const Tienda = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 mainSection">
       <h2>Tienda</h2>
       <Row className="mt-3">
         {productos.map((producto) => (
