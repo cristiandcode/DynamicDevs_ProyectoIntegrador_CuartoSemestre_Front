@@ -48,7 +48,8 @@ const Tienda = () => {
 
   return (
     <Container className="mt-5 mainSection">
-      <h2>Tienda</h2>
+      <h1 className="text-underline-warning">Tienda</h1>
+      <h2 className="text-center">Nuestros Productos disponibles</h2>
       <Row className="mt-3">
         {productos.map((producto) => (
           <Col key={producto.id} xs={12} md={6} lg={4} className="mb-4">
