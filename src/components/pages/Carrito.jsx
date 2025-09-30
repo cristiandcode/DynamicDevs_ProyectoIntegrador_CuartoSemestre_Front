@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { Button, Container, OverlayTrigger, Table, Tooltip } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  OverlayTrigger,
+  Table,
+  Tooltip,
+} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Carrito = () => {
@@ -29,9 +35,10 @@ const Carrito = () => {
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
   };
 
-  const total = carrito.length > 0 
-    ? carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
-    : 0;
+  const total =
+    carrito.length > 0
+      ? carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0)
+      : 0;
 
   if (carrito.length === 0) {
     return (
@@ -60,37 +67,49 @@ const Carrito = () => {
             <tr key={item.id}>
               <td>{item.nombreProducto}</td>
               <td>
-                <img src={item.imagen} alt={item.nombreProducto} className="img-tabla-producto" />
+                <img
+                  src={item.imagen}
+                  alt={item.nombreProducto}
+                  className="img-tabla-producto"
+                />
               </td>
               <td>${item.precio}</td>
               <td>{item.cantidad}</td>
               <td>${item.precio * item.cantidad}</td>
               <td>
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip id={`tooltip-sumar-${item.id}`}>Sumar unidad</Tooltip>}
-              >
-                <Button
-                  variant="success"
-                  size="sm"
-                  onClick={() => incrementarCantidad(item.id)}
+                <OverlayTrigger
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-sumar-${item.id}`}>
+                      Sumar unidad
+                    </Tooltip>
+                  }
                 >
-                  +
-                </Button>
-              </OverlayTrigger>{" "}
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip id={`tooltip-restar-${item.id}`}>Restar unidad</Tooltip>}
-              >
-                <Button
-                  variant="danger"
-                  size="sm"
-                  onClick={() => disminuirCantidad(item.id)}
+                  <Button
+                    variant="success"
+                    size="sm"
+                    onClick={() => incrementarCantidad(item.id)}
+                  >
+                    +
+                  </Button>
+                </OverlayTrigger>{" "}
+                <OverlayTrigger
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-restar-${item.id}`}>
+                      Restar unidad
+                    </Tooltip>
+                  }
                 >
-                  -
-                </Button>
-              </OverlayTrigger>
-            </td>
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={() => disminuirCantidad(item.id)}
+                  >
+                    -
+                  </Button>
+                </OverlayTrigger>
+              </td>
             </tr>
           ))}
         </tbody>
