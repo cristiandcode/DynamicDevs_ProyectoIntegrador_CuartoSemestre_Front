@@ -24,6 +24,13 @@
   text-decoration-color: #ffc107;
   
 }
+.img-tabla-producto {
+  width: 200px;       /* antes 80px */
+  height: 200px;      /* antes 80px */
+  object-fit: cover;  /* mantiene proporciones y recorta si sobra */
+  display: block;
+  margin: 0 auto;
+}
 .bgfooter{
   background-color: #FFC107;
 }
@@ -55,6 +62,12 @@
     height: 400px;
     object-fit: cover;
   }
+ .detalle-img {
+  width: 100%;       /* ocupa todo el ancho del contenedor */
+  height: 400px;     /* altura fija para todas las imágenes */
+  object-fit: cover; /* recorta y centra la imagen manteniendo la proporción */
+  border-radius: 8px; /* opcional, para que se vea más bonito */
+}
   
 .img-thumbnail{
     width: 200px;
