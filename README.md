@@ -27,3 +27,4 @@ npm install react-hook-form
 npm install sweetalert
 npm install sweetalert2
 npm install json-server
+npm install react-icons
