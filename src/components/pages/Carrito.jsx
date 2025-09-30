@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { Button, Container, OverlayTrigger, Table, Tooltip } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Carrito = () => {
@@ -66,9 +66,31 @@ const Carrito = () => {
               <td>{item.cantidad}</td>
               <td>${item.precio * item.cantidad}</td>
               <td>
-                <Button variant="success" size="sm" onClick={() => incrementarCantidad(item.id)}>+</Button>{" "}
-                <Button variant="danger" size="sm" onClick={() => disminuirCantidad(item.id)}>-</Button>
-              </td>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip id={`tooltip-sumar-${item.id}`}>Sumar unidad</Tooltip>}
+              >
+                <Button
+                  variant="success"
+                  size="sm"
+                  onClick={() => incrementarCantidad(item.id)}
+                >
+                  +
+                </Button>
+              </OverlayTrigger>{" "}
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip id={`tooltip-restar-${item.id}`}>Restar unidad</Tooltip>}
+              >
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => disminuirCantidad(item.id)}
+                >
+                  -
+                </Button>
+              </OverlayTrigger>
+            </td>
             </tr>
           ))}
         </tbody>
