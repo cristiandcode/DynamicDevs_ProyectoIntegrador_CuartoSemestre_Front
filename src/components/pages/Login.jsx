@@ -2,10 +2,10 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { login } from "../helpers/queries";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom"; // ✅ IMPORTA useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setUsuarioLogueado }) => {
-  const navigate = useNavigate(); // ✅ CREA navigate
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -15,26 +15,22 @@ const Login = ({ setUsuarioLogueado }) => {
   const onSubmit = (usuario) => {
     console.log(usuario);
     if (login(usuario) === true) {
-      //Aqui el usuario ya se logueo
       Swal.fire({
-        title: "¡Ingresaste con exito!",
+        title: "¡Ingresaste con éxito!",
         text: "Bienvenido al sitio de ChocoDevs Alfajores",
         icon: "success",
         draggable: true,
       });
 
-      // Guardar usuario en state y en sessionStorage (opcional)
-      sessionStorage.setItem("usuarioChocodevs", JSON.stringify(usuario));
+      // Seteamos en el state el email
       setUsuarioLogueado(usuario.email);
 
-      // ✅ REDIRECCIONAR AUTOMATICAMENTE
+      // Redirigimos al administrador
       navigate("/administrador");
-      
     } else {
-      //Credenciales incorrectas
       Swal.fire({
         title: "Error en el inicio de sesión",
-        text: "Usuario o contraseña erronea",
+        text: "Usuario o contraseña incorrecta",
         icon: "error",
       });
     }
@@ -46,7 +42,7 @@ const Login = ({ setUsuarioLogueado }) => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo EMAIL */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Correo Electronico</Form.Label>
+          <Form.Label>Correo Electrónico</Form.Label>
           <Form.Control
             type="email"
             placeholder="Ej: juan@mail.com"
@@ -58,17 +54,19 @@ const Login = ({ setUsuarioLogueado }) => {
               },
               maxLength: {
                 value: 250,
-                message: "El correo debe tener como maximo 250 caracteres",
+                message: "El correo debe tener como máximo 250 caracteres",
               },
               pattern: {
                 value:
                   /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
                 message:
-                  "El correo debe ser un email valido Ej: nombre@mail.com",
+                  "El correo debe ser un email válido. Ej: nombre@mail.com",
               },
             })}
           />
-          <Form.Text className="text-danger">{errors.email?.message}</Form.Text>
+          <Form.Text className="text-danger">
+            {errors.email?.message}
+          </Form.Text>
         </Form.Group>
 
         {/* Campo PASSWORD */}
@@ -85,7 +83,7 @@ const Login = ({ setUsuarioLogueado }) => {
               },
               maxLength: {
                 value: 12,
-                message: "La contraseña debe tener como maximo 12 caracteres",
+                message: "La contraseña debe tener como máximo 12 caracteres",
               },
               pattern: {
                 value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,

@@ -1,15 +1,14 @@
 import { Navigate } from "react-router-dom";
 
-const RutasProtegidas = ({children}) => {
-    //agregar la logica para definir si mostramos o ocultamos las rutas hijas
-    const userAdmin = JSON.parse(sessionStorage.getItem('usuarioChocodevs')) || null;
-    //preguntar si no hay nadie como admin
-    if(!userAdmin){
-        //Redireccionar al admin
-        return <Navigate to={'/login'}></Navigate>
-    }else{
-        return children;
-    }
+const RutasProtegidas = ({ children }) => {
+  // ahora usamos localStorage
+  const userAdmin = JSON.parse(localStorage.getItem('usuarioChocodevs')) || null;
+
+  if (!userAdmin) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
 };
 
 export default RutasProtegidas;
