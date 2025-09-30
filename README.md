@@ -27,9 +27,13 @@ npm install react-hook-form
 npm install sweetalert
 npm install sweetalert2
 npm install json-server
+<<<<<<< HEAD
 
 ¿Como correr el proyecto en tu pc?
 Ejecutar el NPM y el npx
 
 - npm run dev
 - npx json-server db.json
+=======
+npm install react-icons
+>>>>>>> dev
