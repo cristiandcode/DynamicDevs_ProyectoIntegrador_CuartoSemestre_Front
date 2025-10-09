@@ -20,15 +20,16 @@ El proyecto combina buenas prácticas de desarrollo web, experiencia de usuario 
 ---
 
 ## 👨‍💻 Equipo de desarrollo
+
 | Rol | Nombre | GitHub |
 |-----|--------|--------|
-| Líder Técnico (Frontend) | [Cristian Díaz](https://github.com/cristiandcode) | Frontend, React, UI/UX, Backend local |
-| Programador | [Jose Villalba](https://github.com/JosechoVBA) | Frontend, UI/UX, Testing y QA|
-| Programador | [Rodrigo Leyes](https://github.com/Roddri19) |  Frontend, UI/UX, Testing y QA |
-| Programador | [Noelia Cruz](https://github.com/noeliacruz22) | Frontend, UI/UX, Testing y QA|
-| Programador | [Pablo Mateos](https://github.com/PabloMateos19) | Frontend, UI/UX, Testing y QA |
+| Líder Técnico (Frontend) | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Cristian Díaz](https://github.com/cristiandcode) | Frontend, React, UI/UX, Backend local |
+| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Jose Villalba](https://github.com/JosechoVBA) | Frontend, UI/UX, Testing y QA |
+| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Rodrigo Leyes](https://github.com/Roddri19) | Frontend, UI/UX, Testing y QA |
+| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Noelia Cruz](https://github.com/noeliacruz22) | Frontend, UI/UX, Testing y QA |
+| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Pablo Mateos](https://github.com/PabloMateos19) | Frontend, UI/UX, Testing y QA |
 
----
+
 
 ## ⚙️ Tecnologías utilizadas
 
