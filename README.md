@@ -73,15 +73,12 @@ El proyecto combina buenas prácticas de desarrollo web, experiencia de usuario 
 
 ---
 
-## 📫 Contactos
+## 📫 Contacto
 
-**Cristian Díaz – Líder Técnico (Frontend) responsable del proyecto**  
+**Cristian Díaz – Líder Técnico (Frontend y Backend) responsable del proyecto**  
 - [LinkedIn](https://www.linkedin.com/in/cristiandcode/)  
 - [GitHub](https://github.com/cristiandcode)
 
-**Hector Cortez – Líder Técnico (Backend) responsable del proyecto**  
-- [LinkedIn](https://www.linkedin.com/in/hector-cortez-cy/)  
-- [GitHub](https://github.com/CoraYako)
 
 ## 🚀 Clonar y ejecutar el proyecto
 
