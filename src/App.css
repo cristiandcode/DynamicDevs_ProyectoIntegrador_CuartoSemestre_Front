@@ -144,6 +144,72 @@
 /* Ajuste para pantallas grandes (LG) */
 @media (min-width: 992px) {
   .img-alfajor-working {
-    max-width: 650px; /* más pequeña que antes */
+    max-width: 450px; /* más pequeña que antes */
   }
+}
+
+/* ===== Error 404 en rojo ===== */
+.texto-error404 {
+  color: #dc3545; /* rojo Bootstrap */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  font-size: clamp(2rem, 6vw, 6rem);
+  margin-bottom: 1rem;
+  animation: aparecer 1s ease-out forwards;
+}
+
+/* ===== Título divertido ===== */
+.titulo-error {
+  color: black;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* más pequeño que antes */
+  animation: aparecer 1.2s ease-out forwards;
+}
+
+/* ===== Imagen del error responsiva ===== */
+.imagenError {
+  width: 100%;
+  max-width: 300px; /* SM por defecto */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenError:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== Ajustes para MD ===== */
+@media (min-width: 768px) {
+  .imagenError {
+    max-width: 400px;
+  }
+}
+
+/* ===== Ajustes para LG ===== */
+@media (min-width: 992px) {
+  .imagenError {
+    max-width: 500px;
+  }
+}
+
+/* ===== Botón ===== */
+.buttonError {
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttonError:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== Animación simple para títulos ===== */
+@keyframes aparecer {
+  0% { opacity: 0; transform: translateY(-15px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
