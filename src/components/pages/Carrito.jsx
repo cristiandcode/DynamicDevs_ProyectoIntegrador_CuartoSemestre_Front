@@ -1,3 +1,4 @@
+import "../../App.css";
 import { useState, useEffect } from "react";
 import {
   Button,
@@ -7,6 +8,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+
 
 const Carrito = () => {
   const [carrito, setCarrito] = useState([]);
@@ -42,7 +44,7 @@ const Carrito = () => {
 
   if (carrito.length === 0) {
     return (
-      <Container className="mt-5">
+      <Container className="mt-5 mainSection">
         <h3>El carrito está vacío. Agrega productos desde la tienda.</h3>
       </Container>
     );
@@ -55,7 +57,7 @@ const Carrito = () => {
   };
 
   return (
-    <Container className="mt-5 mainSection">
+    <Container className="mt-5">
       <h2>Carrito de Compras</h2>
       <Table striped bordered hover className="mt-3">
         <thead>
