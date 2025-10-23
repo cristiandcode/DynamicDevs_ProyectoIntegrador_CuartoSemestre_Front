@@ -5,34 +5,56 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ setUsuarioLogueado }) => {
-  const navigate = useNavigate();
+  const navegacion = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (usuario) => {
-    console.log(usuario);
-    if (login(usuario) === true) {
-      Swal.fire({
-        title: "¡Ingresaste con éxito!",
-        text: "Bienvenido al sitio de ChocoDevs Alfajores",
-        icon: "success",
-        draggable: true,
-      });
+const onSubmit = async (usuario) => {
+    try {
+      const respuesta = await login(usuario);
 
-      // Seteamos en el state el email
-      setUsuarioLogueado(usuario.email);
+      // Verificamos el estado de la respuesta
+      if (respuesta.status === 200) {
+        // Obtener los datos del backend
+        const datos = await respuesta.json();
 
-      // Redirigimos al administrador
-      navigate("/administrador");
-    } else {
-      Swal.fire({
-        title: "Error en el inicio de sesión",
-        text: "Usuario o contraseña incorrecta",
-        icon: "error",
-      });
+
+        // Guardar en sessionStorage
+        sessionStorage.setItem(
+          "usuarioChocodevs",
+          JSON.stringify({ email: datos.email, token: datos.token })
+        );
+
+
+        // Actualizar el state
+        setUsuarioLogueado(datos);
+
+        // Redireccionar al administrador
+        navegacion("/administrador");
+
+        Swal.fire(
+          "¡Bienvenido!",
+          "Has iniciado sesión correctamente",
+          "success"
+        );
+
+      } else {
+        Swal.fire(
+          "Ocurrió un error",
+          "Correo o contraseña incorrectos",
+          "error"
+        );
+      }
+    } catch (error) {
+      console.error("Error en el login:", error);
+      Swal.fire(
+        "Ocurrió un error",
+        "Error procesando la respuesta del servidor",
+        "error"
+      );
     }
   };
 

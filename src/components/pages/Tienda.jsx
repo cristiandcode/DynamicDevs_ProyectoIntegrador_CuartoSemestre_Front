@@ -20,12 +20,12 @@ const Tienda = () => {
     const carritoActual = JSON.parse(localStorage.getItem("carrito")) || [];
 
     // Verificar si el producto ya está en el carrito
-    const productoExistente = carritoActual.find((item) => item.id === producto.id);
+    const productoExistente = carritoActual.find((item) => item._id === producto._id);
 
     if (productoExistente) {
       // Si ya existe, sumamos cantidad
       const nuevoCarrito = carritoActual.map((item) =>
-        item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
+        item._id === producto._id ? { ...item, cantidad: item.cantidad + 1 } : item
       );
       localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     } else {
@@ -52,7 +52,7 @@ const Tienda = () => {
       <h2 className="text-center">Nuestros Productos disponibles</h2>
       <Row className="mt-3">
         {productos.map((producto) => (
-          <Col key={producto.id} xs={12} md={6} lg={4} className="mb-4">
+          <Col key={producto._id} xs={12} md={6} lg={4} className="mb-4">
             <Card>
               <Card.Img
                 variant="top"

@@ -19,7 +19,7 @@ const Carrito = () => {
 
   const incrementarCantidad = (id) => {
     const nuevoCarrito = carrito.map((item) =>
-      item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
+      item._id === id ? { ...item, cantidad: item.cantidad + 1 } : item
     );
     setCarrito(nuevoCarrito);
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
@@ -28,7 +28,7 @@ const Carrito = () => {
   const disminuirCantidad = (id) => {
     const nuevoCarrito = carrito
       .map((item) =>
-        item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
+        item._id === id ? { ...item, cantidad: item.cantidad - 1 } : item
       )
       .filter((item) => item.cantidad > 0);
     setCarrito(nuevoCarrito);
@@ -70,7 +70,7 @@ const Carrito = () => {
         </thead>
         <tbody>
           {carrito.map((item) => (
-            <tr key={item.id}>
+            <tr key={item._id}>
               <td>{item.nombreProducto}</td>
               <td>
                 <img
@@ -86,7 +86,7 @@ const Carrito = () => {
                 <OverlayTrigger
                   placement="top"
                   overlay={
-                    <Tooltip id={`tooltip-sumar-${item.id}`}>
+                    <Tooltip id={`tooltip-sumar-${item._id}`}>
                       Sumar unidad
                     </Tooltip>
                   }
@@ -94,7 +94,7 @@ const Carrito = () => {
                   <Button
                     variant="success"
                     size="sm"
-                    onClick={() => incrementarCantidad(item.id)}
+                    onClick={() => incrementarCantidad(item._id)}
                   >
                     +
                   </Button>
@@ -102,7 +102,7 @@ const Carrito = () => {
                 <OverlayTrigger
                   placement="top"
                   overlay={
-                    <Tooltip id={`tooltip-restar-${item.id}`}>
+                    <Tooltip id={`tooltip-restar-${item._id}`}>
                       Restar unidad
                     </Tooltip>
                   }
@@ -110,7 +110,7 @@ const Carrito = () => {
                   <Button
                     variant="danger"
                     size="sm"
-                    onClick={() => disminuirCantidad(item.id)}
+                    onClick={() => disminuirCantidad(item._id)}
                   >
                     -
                   </Button>

@@ -59,7 +59,7 @@ useEffect(() => {
         <tbody>
           {
             // producto={itemProducto} es nuestro prop para itemProducto es decir producto es nuestra prop y itemProducto es el valor que le estamos pasando
-            productos.map((itemProducto)=><ItemProducto key={itemProducto.id} producto={itemProducto} setProductos={setProductos}></ItemProducto>)
+            productos.map((itemProducto)=><ItemProducto key={itemProducto._id} producto={itemProducto} setProductos={setProductos}></ItemProducto>)
           }
         </tbody>
       </Table>

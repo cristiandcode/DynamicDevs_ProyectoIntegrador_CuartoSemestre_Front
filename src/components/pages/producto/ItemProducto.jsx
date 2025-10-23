@@ -16,7 +16,7 @@ const ItemProducto = ({producto, setProductos}) => {
   cancelButtonText: "Cancelar"
 }).then(async (result) => {
   if (result.isConfirmed) {
-    const respuesta = await eliminarProductoAPI(producto.id)
+    const respuesta = await eliminarProductoAPI(producto._id)
     if(respuesta.status === 200){
       Swal.fire({
         title: "Producto eliminado",
@@ -43,7 +43,7 @@ const ItemProducto = ({producto, setProductos}) => {
   }
   return (
     <tr>
-      <td className="text-center d-none">{producto.id}</td>
+      <td className="text-center d-none">{producto._id}</td>
       <td className="text-center">{producto.nombreProducto}</td>
       <td className="text-center">{producto.precio}</td>
       <td className="text-center img-tabla-producto">
@@ -57,7 +57,7 @@ const ItemProducto = ({producto, setProductos}) => {
       <td className="text-center ">
         <OverlayTrigger  placement="top"
           overlay={<Tooltip id="tooltip-agregar">Editar producto</Tooltip>}>
-        <Link variant="warning" className="me-lg-2 btn btn-warning" to={"/administrador/editar/"+producto.id}>
+        <Link variant="warning" className="me-lg-2 btn btn-warning" to={"/administrador/editar/"+producto._id}>
           <i className="bi bi-pencil-square"></i>
         </Link>
         </OverlayTrigger>

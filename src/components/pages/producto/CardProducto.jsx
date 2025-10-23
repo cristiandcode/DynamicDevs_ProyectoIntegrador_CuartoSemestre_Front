@@ -5,7 +5,7 @@ const CardProducto = ({ producto }) => {
   const navigate = useNavigate();
 
   const irADetalle = () => {
-    navigate(`/detalle/${producto.id}`);
+    navigate(`/detalle/${producto._id}`);
   };
 
   return (
