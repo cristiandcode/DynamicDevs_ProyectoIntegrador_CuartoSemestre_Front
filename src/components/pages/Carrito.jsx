@@ -58,7 +58,7 @@ const Carrito = () => {
 
   return (
     <Container className="mt-5">
-      <h2>Carrito de Compras</h2>
+      <h2 className="text-underline-warning">Carrito de Compras</h2>
       <Table striped bordered hover className="mt-3">
         <thead>
           <tr>
