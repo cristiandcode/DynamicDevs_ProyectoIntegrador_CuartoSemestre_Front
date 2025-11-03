@@ -27,6 +27,7 @@ export const listarProductos = async () => {
     console.error(error);
   }
 };
+
 //GET
 export const obtenerProducto = async (id) => {
   try {
@@ -53,6 +54,7 @@ export const crearProducto = async (productoNuevo) => {
     console.error(error);
   }
 };
+
 //DELETE
 export const eliminarProductoAPI = async (id) => {
   try {

@@ -10,21 +10,23 @@ const CardProducto = ({ producto }) => {
 
   return (
     <Col md={4} lg={3} className="mb-3">
-      <Card className="h-100">
+      <Card className="h-100 card-hover-effect"> {/* Mantén esta clase */}
         <div>
           <img
             src={producto.imagen}
             alt={producto.nombreProducto}
-            className="card-img-top-nueva"
+            className="card-img-top-nueva" /* Esta clase es la que usas para tus estilos de imagen */
           />
         </div>
-        <Card.Body>
+        <Card.Body className="d-flex flex-column">
           <Card.Title className="primary-font">
             {producto.nombreProducto}
           </Card.Title>
-          <Card.Text>
-            Descripción: {producto.descripcion_breve} <br className="mb-2" />
-            <span className="fw-bold">Precio: {producto.precio}</span>
+          <div>
+            Descripción: {producto.descripcion_breve}
+          </div>
+          <Card.Text className="mt-auto pt-2">
+            <span className="fw-bold">Precio: ${producto.precio}</span>
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-end">

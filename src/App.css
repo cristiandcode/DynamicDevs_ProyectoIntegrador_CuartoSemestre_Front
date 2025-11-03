@@ -194,6 +194,26 @@
   }
 }
 
+/* src/index.css o tu archivo CSS personalizado */
+
+/* Estilos para el efecto hover en las tarjetas */
+.card-hover-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para transform y sombra */
+  will-change: transform, box-shadow; /* Sugiere al navegador que estas propiedades cambiarán */
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px) scale(1.02); /* Mueve la tarjeta ligeramente hacia arriba y la agranda un poco */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+}
+
+
+/* Puedes mantener solo el estilo que tenías originalmente para .card-img-top-nueva si ya funcionaba bien */
+.card-img-top-nueva {
+  width: 100%; /* Si ya tenías esto, déjalo así */
+  /* Elimina cualquier propiedad height o object-fit si no quieres que las imágenes cambien de tamaño */
+}
+
 /* ===== Error 404 en rojo ===== */
 .texto-error404 {
   color: #dc3545; /* rojo Bootstrap */
