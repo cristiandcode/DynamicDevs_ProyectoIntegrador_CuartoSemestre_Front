@@ -10,6 +10,49 @@ El proyecto combina buenas prácticas de desarrollo web, experiencia de usuario 
 
 ---
 
+---
+
+## 🖼️ Vista previa del proyecto
+
+<p align="center">
+  <img src="./public/readme-img/Inicio.png" width="600" alt="Página de inicio" />
+  <br/>
+  <em>Página principal con catálogo destacado</em>
+</p>
+
+<p align="center">
+  <img src="./public/readme-img/verMasInicio.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Detalle individual del producto con opciones de compra</em>
+</p>
+<p align="center">
+  <img src="./public/readme-img/Tienda.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Pagina de la tienda</em>
+</p>
+<p align="center">
+  <img src="./public/readme-img/Carrito.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Pagina del carrito</em>
+</p>
+<p align="center">
+  <img src="./public/readme-img/MetodoDePago.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Metodo de pago</em>
+</p>
+<p align="center">
+  <img src="./public/readme-img/Administrador.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Panel del administrador donde se pueden **crear, editar y eliminar productos** del catálogo, gestionar pedidos y mantener actualizado el inventario.</em>
+</p>
+<p align="center">
+  <img src="./public/readme-img/Error404.png" width="600" alt="Vista ampliada del producto" />
+  <br/>
+  <em>Interfaz mostrada cuando el usuario ingresa a una ruta inexistente.</em>
+</p>
+
+---
+
 ## 🧠 Objetivos del proyecto
 
 - Desarrollar una **tienda online funcional** para la venta de productos de consumo, como alfajores e infusiones.  
