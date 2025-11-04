@@ -23,7 +23,7 @@ El proyecto combina buenas prácticas de desarrollo web, experiencia de usuario 
 <p align="center">
   <img src="./public/readme-img/verMasInicio.png" width="600" alt="Vista ampliada del producto" />
   <br/>
-  <em>Detalle individual del producto con opciones de compra</em>
+  <em>Detalle individual del producto disponible</em>
 </p>
 <p align="center">
   <img src="./public/readme-img/Tienda.png" width="600" alt="Vista ampliada del producto" />
