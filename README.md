@@ -28,7 +28,7 @@ El proyecto combina buenas prácticas de desarrollo web, experiencia de usuario 
 | Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Rodrigo Leyes](https://github.com/Roddri19) | Frontend, UI/UX, Testing y QA |
 | Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Noelia Cruz](https://github.com/noeliacruz22) | Frontend, UI/UX, Testing y QA |
 | Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Pablo Mateos](https://github.com/PabloMateos19) | Frontend, UI/UX, Testing y QA |
-| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Matias Gomez](https://github.com/PabloMateos19) | Frontend, UI/UX, Testing y QA |
+| Programador | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="16"/> [Matias Gomez]() | Frontend, UI/UX, Testing y QA |
 
 
 

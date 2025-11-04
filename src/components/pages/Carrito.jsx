@@ -136,7 +136,10 @@ const Carrito = () => {
     <Container className="mt-5 mainSection">
       <h2 className="text-underline-warning">Carrito de Compras</h2>
       
-      <Table striped bordered hover className="mt-3">
+      {/* 💥 ÚNICA CORRECCIÓN: Se añade la prop 'responsive' al componente Table. 
+          Esto obliga a la tabla a tener scroll horizontal en pantallas pequeñas, 
+          evitando que rompa el layout del menú y footer. */}
+      <Table striped bordered hover className="mt-3" responsive>
         <thead>
           <tr>
             <th>Producto</th>
@@ -202,7 +205,7 @@ const Carrito = () => {
           onClick={() => setShowPaymentModal(true)}
           className="mb-2"
         >
-          Proceder al Pago
+          Pagar
         </Button>
       </div>
 
